@@ -3,7 +3,7 @@
 # pyMultiWii
 
 
-Handles the MultiWii Serial Protocol to send/receive data from boards.
+Handles the MultiWii Serial Protocol（MSP 1.x） to send/receive data from boards.
 
 This is a text based / console, no GUI, it works reading data from the multicopter and/or sending commands from a computer via a serial modem. I use this module for doing different request to my multicopters in order to control them wirelessly via a raspberry pie.
 
@@ -12,7 +12,7 @@ This is a text based / console, no GUI, it works reading data from the multicopt
 To install with pip run the following command from this directory,
 
 ```
-pip install .
+python3 -m pip install .
 ```
 
 ## How?
@@ -25,7 +25,7 @@ from pymultiwii import MultiWii
 serialPort = "/dev/tty.usbserial-A101CCVF"
 board = MultiWii(serialPort)
     while True:
-		print board.getData(MultiWii.ATTITUDE)
+        print board.getData(MultiWii.ATTITUDE)
 ```
 
 With the example above, you will see a stream of data on your terminal.
@@ -70,9 +70,9 @@ if __name__ == "__main__":
     try:
         while True:
             board.getData(MultiWii.ATTITUDE)
-            print board.attitude 
-    except Exception,error:
-        print "Error on Main: "+str(error)
+            print(board.attitude)
+    except Exception as error:
+        print("Error on Main: "+str(error))
 ```
 
 This module can achieve communication back and forth of 300hz, this was achieved using a Naze32 (32bits micro-controller) board and a Odroid U3. And around 62.5hz when using a MultiWii AIO 2.0 (8bits micro-controller) board and a Raspberry Pi.
