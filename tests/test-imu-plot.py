@@ -56,5 +56,5 @@ if __name__ == "__main__":
 			gy = board.rawIMU['gy']
 			gz = board.rawIMU['gz']
 			chart.plot(ax, ay, az, gx, gy, gz)
-	except Exception,error:
-		print ("Error on Main: "+str(error))
+	except Exception as error:
+		print("Error on Main: "+str(error))
