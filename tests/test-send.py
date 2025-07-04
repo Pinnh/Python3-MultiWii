@@ -29,6 +29,6 @@ if __name__ == "__main__":
             board.sendCMDreceiveATT(16,MultiWii.SET_RAW_RC,data)
             
             print (board.attitude)
-    except Exception,error:
-        print ("Error on Main: "+str(error))
+    except Exception as error:
+        print("Error on Main: "+str(error))
         
