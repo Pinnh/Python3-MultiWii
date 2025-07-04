@@ -24,8 +24,8 @@ from pymultiwii import MultiWii
 
 serialPort = "/dev/tty.usbserial-A101CCVF"
 board = MultiWii(serialPort)
-    while True:
-        print(board.getData(MultiWii.ATTITUDE))
+while True:
+    print(board.getData(MultiWii.ATTITUDE))
 ```
 
 With the example above, you will see a stream of data on your terminal.
