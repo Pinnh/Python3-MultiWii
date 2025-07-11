@@ -1,6 +1,6 @@
 ![Altax](https://altax.net/images/altax.png "Altax")
 
-# pyMultiWii
+# Python3-MultiWii
 
 
 Handles the MultiWii Serial Protocol（MSP 1.x） to send/receive data from boards.
